@@ -2,16 +2,17 @@ h2{
   text-align: center;
 }
 
+.dark-mode {
+  background-color: rgb(41, 39, 39);
+  color: white;
+}
+
 button{
-padding: 0, 0, 0, 0;
-margin: 7, 0, 7, 0;
 text-align: center;
 display: center;
 float: right;
 border-radius: 12px;
-margin-top: 7px;
 }
-
 
 ul {
   list-style-type: none;
@@ -26,14 +27,15 @@ nav {
   color: white;
 }
 
+a:hover {
+  background-color: #c7660c;
+  color: black;
+  animation-delay: 1s;
+}
+
 body{
 background-color: darkgreen;
 color: white;
-}
-
-.dark-mode {
-  background-color: black;
-  color: white;
 }
 
 .center {
@@ -49,8 +51,7 @@ color: white;
 
 .grid-container {
 display: grid;
-grid-template-columns: auto ;
-background-color: darkgreen;
+grid-template-columns: 50% 50%;
 padding: 10px;
 }
 
@@ -59,6 +60,28 @@ border: 5px solid rgba(187, 119, 31);
 padding: 18px;
 font-size: 20px;
 text-align: center;
+min-width: 50%;
+max-height: 400px;
+}
+
+@media screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid-container-home {
+  display: grid;
+  grid-template-columns: auto;
+  padding: 10px;
+}
+
+.grid-item-home {
+  border: 5px solid rgba(187, 119, 31);
+  padding: 18px;
+  font-size: 20px;
+  text-align: center;
+  min-width: 100%;
 }
 
 footer {
