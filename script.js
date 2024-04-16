@@ -1,17 +1,21 @@
 
 //Darkmode toggle
-function myFunction() {
+function toggleDarkMode() {
   document.body.classList.toggle("dark-mode");
   localStorage.setItem("darkModeEnabled", document.body.classList.contains("dark-mode"));
 }
 
-//Gets the local dark mode storage
 window.onload = function() {
   var darkModeEnabled = localStorage.getItem("darkModeEnabled");
   if (darkModeEnabled === "true") {
     // If dark mode is enabled, toggle it on
-    myfunction();
+    toggleDarkMode();
   }
+};
+
+function myFunction(){
+  // Toggle dark mode for the body element
+  toggleDarkMode();
 };
 
 //Submit button 
